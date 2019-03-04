@@ -43,9 +43,7 @@ class Braccio(object):
                              limb+"_w2"]
 
 
-    # Consente di:
-    #        1. Settare la posizione da raggiunre nello spazio dei giunti
-    #        2. Lo spostamento del braccio nella posizione di giunto specificata      
+    # Consente di eseguire lo spostamento del braccio considerando gli angoli di giunto      
     def move_with_joints(self, list_joints):
 
         joints = list()
@@ -58,9 +56,7 @@ class Braccio(object):
         rospy.sleep(1)
         self._limb.go(wait=True)
     
-    # Consente di:
-    #        1. Settare la posizione da raggiunre in punti cartesiani
-    #        2. Lo spostamento del braccio nella posizione specificata
+    # Consente di eseguire lo spostamento del braccio nella pose (coordinate nello spazio) specificata
     def move_with_pose(self, pose):
 
         res = False
