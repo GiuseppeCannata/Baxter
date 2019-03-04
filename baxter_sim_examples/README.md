@@ -1,2 +1,1 @@
-"#Baxter" 
-"# Baxter" 
+Baxter 
