@@ -25,6 +25,17 @@ from baxter_core_msgs.srv import (
 # Baxter
 import baxter_interface
 
+"""
+Modulo python.
+ik_request permette di invocare il servizio di cinematica inversa (del Baxter).
+Se il calcolo della cinematica inversa andrà a buon fine allora ik_request restituirà al    
+chiamante gli angoli di giunto, altrimenti avremo un log di errore.
+
+:param limb: nome del braccio che richiede l attivazione del servizio
+:param pose: posizione che si vuole convertire in angoli di giunto
+:param verbose: attivazione o disattivazione della modalità verbosa
+:return: angoli di giunto 
+"""
 def ik_request(limb, pose, verbose=False):
 
         #Nome Servizio
