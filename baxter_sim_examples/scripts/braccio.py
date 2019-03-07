@@ -12,9 +12,9 @@ import baxter_interface
 
 # Messaggi
 from geometry_msgs.msg import (
-    Pose,
-    Point,
-    Quaternion,
+    Pose,        # http://docs.ros.org/lunar/api/geometry_msgs/html/msg/Pose.html
+    Point,       # http://docs.ros.org/lunar/api/geometry_msgs/html/msg/Point.html
+    Quaternion,  # http://docs.ros.org/lunar/api/geometry_msgs/html/msg/Quaternion.html
 )
 
 # Others
@@ -95,7 +95,7 @@ class Braccio(object):
     Restituisce la posizione in coordinate cartesiane del gripper
 	
 	:return: posizione attuale del gripper
-	:rtype: Il tipo ritorno è un Pose, per maggiori dettagli: http://docs.ros.org/lunar/api/geometry_msgs/html/msg/Pose.html
+	:rtype: Il tipo ritorno è un Pose
     """
     def get_endpoint_pose(self):
 
