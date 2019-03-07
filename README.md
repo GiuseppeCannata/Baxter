@@ -1,4 +1,4 @@
-<h1> Baxter <h1>
+<h1> Baxter </h1>
 <p>
 La robot application è stata realizzata come progetto per il corso di misure e strumentazione per l'utomazione presso il laboratorio di robotica dell'università politecnica della marche.
 L'obiettivo era quello di effettuare lo scambio di un oggetto tra il gripper del braccio sinistro e il gripper del braccio destro.
@@ -14,7 +14,7 @@ I tool utilizzati sono:
 </ul>
 </p>
 <br>
-<h3> - Utilizzo del sorgente <h3>
+<h3> - Utilizzo del sorgente </h3>
 <p>
 La cartella baxter_sim_examples è un package ROS, per poterlo utilizzare seguire i seguenti passi:
 <ol> 
