@@ -51,7 +51,7 @@ class Braccio(object):
     
     :param list_joints: Lista degli angoli di giunto in cui si vuole spostare il braccio
     """
-	def move_with_joints(self, list_joints):
+    def move_with_joints(self, list_joints):
 
         joints = list()
 
@@ -69,12 +69,12 @@ class Braccio(object):
 		# Una volta trovata la traiettoria priva di ostacoli il braccio viene spostato
         self._limb.go(wait=True)
     
-	"""
+    """
     Consente di eseguire lo spostamento del braccio nella pose (coordinate nello spazio) specificata
 	
-	:param pose: Posizione in coordinate cartesiane in cui si vuole posizionare il braccio. 
-	             Le coordinate devono essere prese considerando il gripper
-	"""
+    :param pose: Posizione in coordinate cartesiane in cui si vuole posizionare il braccio. 
+	         Le coordinate devono essere prese considerando il gripper
+    """
     def move_with_pose(self, pose):
 
         res = False
@@ -91,12 +91,12 @@ class Braccio(object):
 
         return res
     
-	"""
+    """
     Restituisce la posizione in coordinate cartesiane del gripper
 	
 	:return: posizione attuale del gripper
 	:rtype: Il tipo ritorno è un Pose, per maggiori dettagli: http://docs.ros.org/lunar/api/geometry_msgs/html/msg/Pose.html
-	"""
+    """
     def get_endpoint_pose(self):
 
         pose = baxter_interface.Limb(self._name).endpoint_pose()
@@ -105,14 +105,14 @@ class Braccio(object):
 					  
     """   
     Consente di aprire il gripper
-	"""
+    """
     def gripper_open(self):
         self._gripper.open()
         rospy.sleep(1)
     
-	"""
+    """
     Consente di chiudere il gripper
-	"""
+    """
     def gripper_close(self):
         self._gripper.close()
         rospy.sleep(1)
