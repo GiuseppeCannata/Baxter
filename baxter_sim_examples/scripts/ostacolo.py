@@ -8,17 +8,21 @@ import moveit_commander
 
 # Messaggi
 from geometry_msgs.msg import (
-    PoseStamped
+    PoseStamped  # http://docs.ros.org/api/geometry_msgs/html/msg/PoseStamped.html
 )
 
-
+"""
+Script python che consente di caricare in RViz i vari ostacoli definiti all interno
+"""
 if __name__ == '__main__':
   
    rospy.init_node("ostacolo")
+   
+   # Prendiamo la scena che andremo a modificare per aggiungere gli ostacoli
    scene = moveit_commander.PlanningSceneInterface()
    rospy.sleep(2)
 
-   # Creazione ostacolo
+   # Creazione ostacolo 1
    ostacolo = PoseStamped()
    ostacolo.header.frame_id = "world"
    ostacolo.pose.position.x = 0.7
@@ -30,7 +34,7 @@ if __name__ == '__main__':
    # 3 param: dimensioni ostacolo , profondita, lunghezza, altezza
    scene.add_box("table", ostacolo, (0.553756, 0.9, 0.7))
 
-   # Creazione ostacolo
+   # Creazione ostacolo 2
    ostacolo2 = PoseStamped()
    ostacolo2.header.frame_id = "world"
    ostacolo2.pose.position.x = 0.44  
@@ -39,7 +43,7 @@ if __name__ == '__main__':
   
    scene.add_box("pillar1", ostacolo2, (0.08964, 0.08964, 0.4482))
 
-   """# Creazione ostacolo
+   """# Creazione ostacolo 3
    ostacolo3 = PoseStamped()
    ostacolo3.header.frame_id = "world"
    ostacolo3.pose.position.x = 0.44  
