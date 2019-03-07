@@ -10,7 +10,7 @@ I tool utilizzati sono:
 <ul> 
   <li> <b>Gazebo:</b> simulatore </li>
   <li> <b>RViz:</b> per visualizzare gli ostacoli e muovere il modello del baxter senza l'utilizzo di joystick </li>
-  <li> <b>Molvet:</b> libreria che ci ha permesso di trovare la traiettoria dei bracci considerando la presenza di ostacoli </li>
+  <li> <b>Moveit:</b> libreria che ci ha permesso di trovare la traiettoria dei bracci considerando la presenza di ostacoli </li>
 </ul>
 </p>
 <br>
