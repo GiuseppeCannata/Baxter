@@ -28,7 +28,7 @@ def talker(name_topic, tipo_messaggio, size_coda, msg):
 
        rospy.sleep(1)
        pub.publish(msg)
-       rospy.loginfo("Ho pubblicato
+       rospy.loginfo("Ho pubblicato")
 	   
         
 """

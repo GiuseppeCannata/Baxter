@@ -45,7 +45,7 @@ def right():
     r_braccio.move_with_pose(start2)
     rospy.sleep(1)
 	
-	# TERZO PUNTO DI ARRIVO
+    # TERZO PUNTO DI ARRIVO
     starting_joint_angles = {'right_w0': 1.4337025470874254,
                              'right_w1': 1.6612876079132552,
                              'right_w2': -1.4625539596386004,
@@ -55,21 +55,22 @@ def right():
                              'right_s1': -0.3642896913230187}
     r_braccio.move_with_joints(starting_joint_angles)
     
-	# Spostiamo il braccio nella posizione indicata dal braccio sinistro
+	
+    # Spostiamo il braccio nella posizione indicata dal braccio sinistro
     data.position = Point(x= 0.585560666885, y= 0.209368041126, z= 0.105)
     data.orientation = Quaternion(x=-0.01508949187, y= 0.705381077844, z= 0.707937222017, w= 0.032167249461)
     rospy.sleep(1)
     r_braccio.move_with_pose(data)
     rospy.sleep(1)
 	
-	# Afferriamo il pezzo
+    # Afferriamo il pezzo
     r_braccio.gripper_close() 
 
-	# Diciamo al braccio sinistro di aver preso il pezzo
+    # Diciamo al braccio sinistro di aver preso il pezzo
     talker("right/msg", Bool, 1, True)
 	
-	# Attendiamo che il braccio sinistro abbia aperto il gripper
-	# data == True il gripper è aperto
+    # Attendiamo che il braccio sinistro abbia aperto il gripper
+    # data == True il gripper e' aperto
     data = rospy.wait_for_message("left1/msg", Bool, timeout=None)
 
     if data:
@@ -86,7 +87,7 @@ def right():
        r_braccio.move_with_pose(int2)
        rospy.sleep(1)
 
-	   # QUARTO PUNTO DI ARRIVO
+       # QUARTO PUNTO DI ARRIVO
        final_joint_angles = {'right_w0': 1.4536034401562068,
                              'right_w1': 1.3508498030339906,
                              'right_w2': -1.380729984871202,

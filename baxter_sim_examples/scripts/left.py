@@ -47,7 +47,7 @@ def left():
 	# Apriamo il gripper
     l_braccio.gripper_open()
 
-    # Forniamo le posizioni del blocchetto
+    # Forniamo le posizioni del blocchetto: TERZO PUNTO DI ARRIVO
     pose = Pose( position= Point(x=0.7, y=0.155, z=-0.1325),
                  orientation= Quaternion(x=-0.02495908, y=0.999649, z=0.00737916, w=0.0048645))
     
@@ -57,7 +57,7 @@ def left():
 		l_braccio.gripper_close()  # Afferriamo il blocchetto
 		l_braccio.move_with_joints(starting_joint_angles) # Ci spostiamo nel secondo punto di arrivo
 		  
-		# TERZO PUNTO DI ARRIVO: Ruotiamo il gripper
+		# QUARTO PUNTO DI ARRIVO: Ruotiamo il gripper
 		pose = l_braccio.get_endpoint_pose() 
 		pose.orientation = Quaternion(x= 0.709767506221, y= 0.703906440537 , z= 0.022870575989 , w= 0.0149247056287)
 		
@@ -69,7 +69,7 @@ def left():
 				talker("left/msg", Pose, 1, pose)
 			
 				# Attendiamo che il braccio raggiunga il blocchetto
-				# data == True allora il braccio destro l avrà raggiunto
+				# data == True allora il braccio destro l avra' raggiunto
 				data = rospy.wait_for_message("right/msg", Bool, timeout=None)
 
 				if data:
@@ -80,7 +80,7 @@ def left():
 					talker("left1/msg", Bool, 1, True)
 					
 					# Attendiamo che il braccio destro afferri il pezzo
-					# data == True allora il braccio destro avrà preso il pezzo
+					# data == True allora il braccio destro avra' preso il pezzo
 					data = rospy.wait_for_message("right1/msg", Bool, timeout=None) 
 
 					if data:
@@ -91,8 +91,8 @@ def left():
 			except rospy.ROSInterruptException:
 				pass  
 				
-        else:
-            rospy.logerr("No Joint Angles provided for move_to_joint_positions. Staying put.")
+		else:
+		    rospy.logerr("No Joint Angles provided for move_to_joint_positions. Staying put.")
     else:
         rospy.logerr("No Joint Angles provided for move_to_joint_positions. Staying put.")  
 

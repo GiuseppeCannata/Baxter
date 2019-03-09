@@ -94,8 +94,8 @@ class Braccio(object):
     """
     Restituisce la posizione in coordinate cartesiane del gripper
 	
-	:return: posizione attuale del gripper
-	:rtype: Il tipo ritorno è un Pose
+    :return: posizione attuale del gripper
+    :rtype: Il tipo ritorno e' un Pose
     """
     def get_endpoint_pose(self):
 
