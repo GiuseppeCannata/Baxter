@@ -22,7 +22,6 @@ from moduloMessaggi import (
     talker,
 )
 
-
 def left():
 
     rospy.init_node("left_arm") # Iniziallizziamo il nodo ROS

@@ -70,7 +70,7 @@ def right():
     talker("right/msg", Bool, 1, True)
 	
     # Attendiamo che il braccio sinistro abbia aperto il gripper
-    # data == True il gripper e' aperto
+    # data == True il gripper e aperto
     data = rospy.wait_for_message("left1/msg", Bool, timeout=None)
 
     if data:

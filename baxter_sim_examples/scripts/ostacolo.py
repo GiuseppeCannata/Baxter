@@ -43,7 +43,8 @@ if __name__ == '__main__':
   
    scene.add_box("pillar1", ostacolo2, (0.08964, 0.08964, 0.4482))
 
-   """# Creazione ostacolo 3
+   """
+   # Creazione ostacolo 3
    ostacolo3 = PoseStamped()
    ostacolo3.header.frame_id = "world"
    ostacolo3.pose.position.x = 0.44  

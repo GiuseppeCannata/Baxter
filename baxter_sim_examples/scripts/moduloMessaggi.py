@@ -39,4 +39,5 @@ Permette di scrivere un messaggio sul topic specificato
 :param function: funzione da applicare al messaggio che leggiamo
 """
 def listener(name_topic, tipo_messaggio, function):
+
        rospy.Subscriber(name_topic, tipo_messaggio, function) 

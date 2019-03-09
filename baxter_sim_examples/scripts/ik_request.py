@@ -25,6 +25,7 @@ from baxter_core_msgs.srv import (
 # Baxter
 import baxter_interface
 
+
 """
 Modulo python.
 ik_request permette di invocare il servizio di cinematica inversa (del Baxter).
