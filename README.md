@@ -19,12 +19,13 @@ I tool utilizzati sono:
 La cartella baxter_sim_examples è un package ROS, per poterlo utilizzare seguire i seguenti passi:
 <ol> 
   <li> Scaricare la cartella e spostarla nella cartella src del proprio WorkSpace. Dopodichè ricompilare il Workspace facendo catkin_make   </li>
-  <li> Rendere i file eseguibili; Per farlo eseguire:  
-       <ol>
+  <li> Rendere i file eseguibili; <br>
+       Per farlo eseguire:  
+       <ul>
 	    <li> roscd baxter_project </li>
 		<li> cd scripts </li>
 		<li> sudo chmod +x ./*.py </li>
-	   </ol>
+       </ul>
   </li>
   <li> Aprire un terminale, avviare Gazebo ed attendere il termine del caricamento  </li>
   <li> Aprire un ulteriore terminale e attivare il robot eseguendo il seguente comando: rosrun baxter_tools enable_robot.py -e
