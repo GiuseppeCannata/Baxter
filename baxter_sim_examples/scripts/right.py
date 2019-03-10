@@ -75,19 +75,19 @@ def right():
 
     if data:
 	
-       # Punto intermedio 1 (sotto il gripper sx)
+       # QUARTO PUNTO DI ARRIVO (sotto il gripper sx)
        int1 = Pose( position= Point(x=0.59646481601, y=0.256599564965, z=-0.0152786373748),
                  orientation= Quaternion(x=-0.00553449776039, y=0.698224446563, z=0.712501515165, w=0.0692357020905))
        r_braccio.move_with_pose(int1)
        rospy.sleep(1)
 	   
-       # Punto intermedio 2 
+       # QUINTO PUNTO DI ARRIVO
        int2 = Pose( position= Point(x=0.597068370528, y=-0.0457122506092, z=0.00175406270759),
                  orientation= Quaternion(x=-0.00562289135545, y=0.698260045752, z=0.712471697084, w=0.0691763865266))
        r_braccio.move_with_pose(int2)
        rospy.sleep(1)
 
-       # QUARTO PUNTO DI ARRIVO
+       # SESTO PUNTO DI ARRIVO
        final_joint_angles = {'right_w0': 1.4536034401562068,
                              'right_w1': 1.3508498030339906,
                              'right_w2': -1.380729984871202,
