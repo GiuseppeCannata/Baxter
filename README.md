@@ -24,6 +24,7 @@ La cartella baxter_sim_examples è un package ROS, per poterlo utilizzare seguir
        <br>
        Nello stesso terminale eseguire il comando: rosrun baxter_interface joint_trajectory_action_server.py
   </li>
+  <li> Aprire un ulteriore terminale ed avviare RViz: roslaunch baxter_moveit_config baxter_grippers.launch</li>
   <li> Aprire un ulteriore terminale ed eseguire: rosrun baxter_sim_examples right.py </li>
   <li> Aprire un ulteriore terminale ed eseguire: rosrun baxter_sim_examples left.py </li>
 </ol>
