@@ -57,7 +57,11 @@ def right():
     
 	
     # Spostiamo il braccio nella posizione indicata dal braccio sinistro
-    data.position = Point(x= 0.585560666885, y= 0.209368041126, z= 0.105)
+    #data.position = Point(x= 0.585560666885, y= 0.209368041126, z= 0.105)
+    # offset sulle posizioni per poter raggiungere correttamente il blocchetto
+    data.position.x = data.position.x + 0.006784544  
+    data.position.y = data.position.y + 0.025628289
+    data.position.z = data.position.z - 0.008299399
     data.orientation = Quaternion(x=-0.01508949187, y= 0.705381077844, z= 0.707937222017, w= 0.032167249461)
     rospy.sleep(1)
     r_braccio.move_with_pose(data)
