@@ -1,4 +1,7 @@
 <h1> Baxter </h1>
+<br>
+<img src="https://github.com/GiuseppeCannata/Baxter/blob/master/imgs/Baxter.png" Hspace="220" Vspace="0">
+<br>
 <p>
 La robot application è stata realizzata come progetto per il corso di misure e strumentazione per l'utomazione presso il laboratorio di robotica dell'università politecnica della marche.
 L'obiettivo era quello di effettuare lo scambio di un oggetto tra il gripper del braccio sinistro e il gripper del braccio destro.
