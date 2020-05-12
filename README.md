@@ -40,3 +40,6 @@ La cartella baxter_sim_examples è un package ROS, per poterlo utilizzare seguir
   <li> Aprire un ulteriore terminale ed eseguire: rosrun baxter_project left.py </li>
 </ol>
 </p>
+<br>
+<h3> - Documentazione </h3>
+- <a href=""https://github.com/GiuseppeCannata/Baxter/blob/master/Documentazione/Relazione_baxter.pdf"">
